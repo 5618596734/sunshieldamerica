@@ -309,6 +309,54 @@
   .callback-close{position:absolute;top:12px;right:14px;border:0;background:transparent;color:#fff;font-size:28px;cursor:pointer;}
   @media(max-width:640px){.callback-panel{padding:26px 20px;}.hero-actions{gap:16px;}}
 
+  /* Option 2: premium charcoal-and-gold homepage hero; original embedded logo retained. */
+  .hero{
+    isolation:isolate;
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    background:
+      radial-gradient(ellipse at 82% 42%,rgba(188,128,44,.20),transparent 35%),
+      linear-gradient(115deg,rgba(7,14,19,.99) 0%,rgba(10,17,22,.98) 39%,rgba(27,27,27,.94) 63%,rgba(10,13,17,.99) 100%);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+    background:
+      linear-gradient(121deg,transparent 44%,rgba(205,150,67,.12) 44.1%,transparent 44.4%),
+      linear-gradient(121deg,transparent 57%,rgba(243,186,84,.36) 57.08%,rgba(255,194,90,.08) 57.35%,transparent 58%),
+      linear-gradient(121deg,transparent 69%,rgba(197,132,49,.18) 69.1%,transparent 69.5%),
+      linear-gradient(121deg,transparent 77%,rgba(229,170,80,.10) 77.1%,transparent 77.4%);
+    opacity:.95;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+    background:linear-gradient(90deg,rgba(7,14,19,.40),transparent 58%);
+  }
+  .hero-watermark{
+    right:3%;width:min(43vw,620px);max-height:75%;object-fit:contain;
+    opacity:.84;mix-blend-mode:screen;
+    filter:drop-shadow(0 16px 24px rgba(0,0,0,.6)) drop-shadow(0 0 24px rgba(205,155,77,.13));
+  }
+  .hero-content{max-width:600px;z-index:1;}
+  .hero-content .kicker{color:var(--gold);text-transform:uppercase;letter-spacing:.13em;}
+  .hero-content h1{font-size:clamp(2.9rem,4.5vw,4.6rem);line-height:1.12;}
+  .hero-content h1 .gold{color:var(--ivory);}
+  .hero-content h1 .silver{color:var(--gold);}
+  .hero-content p{color:#c5c8c9;line-height:1.8;}
+  .hero-actions{gap:18px;}
+  .hero-actions .btn-primary{font-size:1rem;padding:17px 24px;}
+  .hero-actions .text-link{color:var(--ivory);}
+  @media(max-width:860px){
+    .hero{min-height:600px;padding:105px 0 110px;}
+    .hero-watermark{width:65vw;right:-10%;opacity:.20;}
+    .hero-content{max-width:100%;}
+  }
+  @media(max-width:480px){
+    .hero{min-height:0;padding:85px 0 95px;}
+    .hero-content h1{font-size:2.65rem;}
+    .hero-watermark{width:92vw;right:-32%;opacity:.12;}
+  }
+
 </style>
 </head>
 <body>
